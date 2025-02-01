@@ -3,10 +3,9 @@ package dev.rene.neuroiqtest
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.android.material.color.utilities.Score
 import dev.rene.neuroiqtest.databinding.MockTestLayoutBinding
 
-class ScoreMockExam : AppCompatActivity() {
+class TotalScore : AppCompatActivity() {
 
     lateinit var binding: MockTestLayoutBinding
     private var topics:String?=null
@@ -32,14 +31,14 @@ class ScoreMockExam : AppCompatActivity() {
 
 
         binding.buttonCheckAnswer.setOnClickListener{
-            val intent = Intent(this@ScoreMockExam,MockUserAnswer::class.java)
+            val intent = Intent(this@TotalScore,MockUserAnswer::class.java)
            // intent.putExtra("subject","$subject")
             startActivity(intent)
 
         }
 
         binding.buttonNext.setOnClickListener{
-            val intent = Intent(this@ScoreMockExam, NeuroSets::class.java)
+            val intent = Intent(this@TotalScore, NeuroSets::class.java)
             startActivity(intent)
         }
 

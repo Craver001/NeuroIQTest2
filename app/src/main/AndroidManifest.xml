@@ -17,7 +17,7 @@
             android:exported="false">
         </activity>
         <activity
-            android:name=".ScoreMockExam"
+            android:name=".TotalScore"
             android:exported="false">
         </activity>
         <activity

@@ -181,8 +181,8 @@ MockExamTest : AppCompatActivity() {
             questionRef.setValue(scorePercentage)
 
 
-            val intent = Intent(this@MockExamTest, ScoreMockExam::class.java)
-            resetTimer()
+            val intent = Intent(this@MockExamTest, TotalScore::class.java)
+           // resetTimer()
             intent.putExtra("Score", userScore)
           //  intent.putExtra("subject",getSubject)
             intent.putExtra("userPercentage", scorePercentage)
@@ -347,7 +347,7 @@ MockExamTest : AppCompatActivity() {
 
     private fun startTimer() {
         if (!isRunning) {
-            val durationInMillis = TimeUnit.MINUTES.toMillis(1)
+            val durationInMillis = TimeUnit.MINUTES.toMillis(15)
             timer = object : CountDownTimer(durationInMillis, 1000) {
                 override fun onTick(millisUntilFinished: Long) {
                     val remainingTime = millisUntilFinished - elapsedTime
@@ -388,6 +388,9 @@ MockExamTest : AppCompatActivity() {
 
         val dialogView = layoutInflater.inflate(R.layout.timeover, null)
         val ok = dialogView.findViewById<Button>(R.id.tryAgain)
+        val totalQuestions = quizQuestions.size
+        // Calculate the score percentage
+        val scorePercentage = (userScore.toDouble() / totalQuestions.toDouble()) * 100
 
 
         val builder = AlertDialog.Builder(this)
@@ -397,7 +400,11 @@ MockExamTest : AppCompatActivity() {
 
         ok.setOnClickListener {
 
-            val intent = Intent(this@MockExamTest, NeuroSets::class.java)
+
+
+            val intent = Intent(this@MockExamTest, TotalScore::class.java)
+            intent.putExtra("Score", userScore)
+            intent.putExtra("userPercentage", scorePercentage)
             startActivity(intent)
         }
 
