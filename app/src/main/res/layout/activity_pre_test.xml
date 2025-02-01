@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/en1"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Mathematics">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/setA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape"
+                android:text="Set A"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/setB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape"
+                android:text="Set B"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/setC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape"
+                android:text="Set C"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+
+            <!--            <Button-->
+<!--                android:id="@+id/setD"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:layout_marginRight="25dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:background="@drawable/shape3"-->
+<!--                android:text="Set D"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textAllCaps="false" />-->
+<!--            <Button-->
+<!--                android:id="@+id/setE"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:layout_marginRight="25dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:background="@drawable/shape3"-->
+<!--                android:text="Set E"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textAllCaps="false" />-->
+<!--            <Button-->
+<!--                android:id="@+id/setF"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:layout_marginRight="25dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:background="@drawable/shape3"-->
+<!--                android:text="Set F"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textAllCaps="false" />-->
+<!--            <Button-->
+<!--                android:id="@+id/setG"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:layout_marginRight="25dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:background="@drawable/shape3"-->
+<!--                android:text="Set G"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textAllCaps="false" />-->
+<!--            <Button-->
+<!--                android:id="@+id/setH"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:layout_marginRight="25dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:background="@drawable/shape3"-->
+<!--                android:text="Set H"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textAllCaps="false" />-->
+<!--            <Button-->
+<!--                android:id="@+id/setI"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:layout_marginRight="25dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:background="@drawable/shape3"-->
+<!--                android:text="Set I"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textAllCaps="false" />-->
+<!--            <Button-->
+<!--                android:id="@+id/setJ"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:layout_marginRight="25dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:background="@drawable/shape3"-->
+<!--                android:text="Set J"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textAllCaps="false" />-->
+<!--            <Button-->
+<!--                android:id="@+id/setK"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:layout_marginRight="25dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:background="@drawable/shape3"-->
+<!--                android:text="Set K"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textAllCaps="false" />-->
+<!--            <Button-->
+<!--                android:id="@+id/setL"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:layout_marginRight="25dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:background="@drawable/shape3"-->
+<!--                android:text="Set L"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textAllCaps="false" />-->
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

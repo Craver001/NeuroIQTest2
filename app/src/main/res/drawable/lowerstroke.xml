@@ -1,0 +1,12 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="@color/white"/>
+
+    <!-- Set padding to create space for the stroke at the bottom -->
+    <padding android:bottom="1dp"/>
+
+    <!-- Set the stroke width to 1dp, but only on the bottom side -->
+    <stroke android:color="@color/brown" android:width="1dp" android:bottom="0dp"/>
+
+</shape>
