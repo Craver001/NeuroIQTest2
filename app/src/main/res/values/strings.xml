@@ -3,4 +3,9 @@
     <string name="unlock">Solution will be visible after you check your Answer</string>
     <string name="lock">You can check the solution after the test</string>
     <string name="Score">Score :</string>
+    <string name="Multiple_Test"> Multiple Choice Test</string>
+    <string name="Logical_Reasoning">Logical Reasoning</string>
+    <string name="Personality_test">Personality Test</string>
+    <string name="Written_Test">Written Test</string>
+    <string name="Decoding"> Decoding</string>
 </resources>

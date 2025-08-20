@@ -1,4 +1,4 @@
-package dev.rene.neuroiqtest
+package dev.rene.neuroiqtest.ui
 
 import android.content.ContentValues
 import android.content.Intent
@@ -23,14 +23,17 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.database.*
-import dev.rene.neuroiqtest.databinding.MockTest2Binding
+import dev.rene.neuroiqtest.databinding.MultipleTestBinding
 
 import android.provider.Settings;
+import dev.rene.neuroiqtest.R
+import dev.rene.neuroiqtest.classes.QuestionClass
+import dev.rene.neuroiqtest.classes.UserQuestionData
 
 @Suppress("DEPRECATION")
 class
-MockExamTest : AppCompatActivity() {
-    lateinit var binding: MockTest2Binding
+MultipleChoice : AppCompatActivity() {
+    lateinit var binding: MultipleTestBinding
     private lateinit var database: FirebaseDatabase
     private lateinit var databaseRef: DatabaseReference
     private lateinit var quizQuestions: List<QuestionClass>
@@ -55,7 +58,7 @@ MockExamTest : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= MockTest2Binding.inflate(layoutInflater)
+        binding= MultipleTestBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -69,14 +72,14 @@ MockExamTest : AppCompatActivity() {
 
 
         binding.progressBar2.progress = progressStatus
-        binding.topicTitle.text="$getSubject"
+       // binding.topicTitle.text="$getSubject"
 
         binding.numberQuestion.text ="Question #$item"
 
         blurOperation()
 
         val userSet = userSet ?: ""
-        val ref = database.reference.child("Neuro")
+        val ref = database.reference.child("Neuro") // mapping name to my firebase realtime database
 
 // Fetch all available sets and select a random one
         ref.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -114,7 +117,8 @@ MockExamTest : AppCompatActivity() {
                                     }
 
                                     // Display first question from the selected set
-                                    showQuestionAtIndex(0)
+                                    val randomIndex = quizQuestions.indices.random()
+                                    showQuestionAtIndex(randomIndex)
                                     binding.progressBar2.visibility = View.GONE
                                     startTimer()
                                 }
@@ -181,7 +185,7 @@ MockExamTest : AppCompatActivity() {
             questionRef.setValue(scorePercentage)
 
 
-            val intent = Intent(this@MockExamTest, TotalScore::class.java)
+            val intent = Intent(this@MultipleChoice, TotalScore::class.java)
            // resetTimer()
             intent.putExtra("Score", userScore)
           //  intent.putExtra("subject",getSubject)
@@ -296,7 +300,7 @@ MockExamTest : AppCompatActivity() {
 
         binding.exit.setOnClickListener{
 
-            val intent = Intent(this@MockExamTest,NeuroSets::class.java)
+            val intent = Intent(this@MultipleChoice,HomePage::class.java)
             startActivity(intent)
         }
 
@@ -402,7 +406,7 @@ MockExamTest : AppCompatActivity() {
 
 
 
-            val intent = Intent(this@MockExamTest, TotalScore::class.java)
+            val intent = Intent(this@MultipleChoice, TotalScore::class.java)
             intent.putExtra("Score", userScore)
             intent.putExtra("userPercentage", scorePercentage)
             startActivity(intent)

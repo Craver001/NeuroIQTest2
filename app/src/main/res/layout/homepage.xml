@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/en1"
     android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".Mathematics">
+    android:orientation="vertical">
 
 
     <ScrollView
@@ -21,38 +20,63 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/setA"
+                android:id="@+id/multiple"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/shape"
-                android:text="Set A"
+                android:text="@string/Multiple_Test"
                 android:textAlignment="center"
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/setB"
+                android:id="@+id/logicalReasoning"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/shape"
-                android:text="Set B"
+                android:text="@string/Logical_Reasoning"
                 android:textAlignment="center"
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/setC"
+                android:id="@+id/Decoding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/shape"
-                android:text="Set C"
+                android:text="@string/Decoding"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/personality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape"
+                android:text="@string/Personality_test"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/Written"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape"
+                android:text="@string/Written_Test"
                 android:textAlignment="center"
                 android:textAllCaps="false" />
 

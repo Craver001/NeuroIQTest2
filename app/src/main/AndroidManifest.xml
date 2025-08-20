@@ -13,19 +13,22 @@
         android:theme="@style/Theme.NeuroIQTest"
         tools:targetApi="31">
         <activity
-            android:name=".MockUserAnswer"
-            android:exported="false">
-        </activity>
+            android:name=".ui.LogicalReasoningReview"
+            android:exported="false" />
         <activity
-            android:name=".TotalScore"
-            android:exported="false">
-        </activity>
+            android:name=".ui.LogicalReasoning"
+            android:exported="false" />
         <activity
-            android:name=".MockExamTest"
-            android:exported="false">
-        </activity>
+            android:name=".ui.MultipleChoiceUserAnswer"
+            android:exported="false" />
         <activity
-            android:name=".NeuroSets"
+            android:name=".ui.TotalScore"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MultipleChoice"
+            android:exported="false" />
+        <activity
+            android:name=".ui.HomePage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

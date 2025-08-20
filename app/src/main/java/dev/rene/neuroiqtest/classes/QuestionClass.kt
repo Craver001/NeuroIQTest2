@@ -1,4 +1,4 @@
-package dev.rene.neuroiqtest
+package dev.rene.neuroiqtest.classes
 
 data class QuestionClass(
     val answerOptions: List<String>,

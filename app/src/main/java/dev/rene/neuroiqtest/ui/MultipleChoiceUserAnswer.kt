@@ -1,4 +1,4 @@
-package dev.rene.neuroiqtest
+package dev.rene.neuroiqtest.ui
 
 import android.content.ContentValues
 import android.content.Intent
@@ -9,11 +9,13 @@ import android.provider.Settings
 import android.util.Log
 import android.view.View
 import com.google.firebase.database.*
-import dev.rene.neuroiqtest.databinding.ActivityMockUserAnswerBinding
+import dev.rene.neuroiqtest.R
+import dev.rene.neuroiqtest.classes.UserQuestionData
+import dev.rene.neuroiqtest.databinding.MultipleChoiceTestReviewBinding
 
-class MockUserAnswer : AppCompatActivity() {
+class MultipleChoiceUserAnswer : AppCompatActivity() {
 
-    lateinit var binding: ActivityMockUserAnswerBinding
+    lateinit var binding: MultipleChoiceTestReviewBinding
     private lateinit var database: FirebaseDatabase
     private lateinit var userQuestionData: List<UserQuestionData>
     private var currentQuestionIndex = 0
@@ -22,7 +24,7 @@ class MockUserAnswer : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMockUserAnswerBinding.inflate(layoutInflater)
+        binding = MultipleChoiceTestReviewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Create a handler to delay the blur operation
@@ -95,7 +97,7 @@ class MockUserAnswer : AppCompatActivity() {
             currentQuestionIndex++
             showQuestionAtIndex(currentQuestionIndex)
         } else {
-            val intent = Intent(this@MockUserAnswer, NeuroSets::class.java)
+            val intent = Intent(this@MultipleChoiceUserAnswer, HomePage::class.java)
             startActivity(intent)
         }
     }
